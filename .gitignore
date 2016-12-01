@@ -2,3 +2,8 @@ chi2017-latex-extended-abstracts.tar.gz
 sigchi-latex-extended-abstracts/
 *.pdf
 *.log
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz
