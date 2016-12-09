@@ -82,18 +82,17 @@
 
 % Do not change the page size or page settings.
 \begin{abstract}
-Study Social is a mobile application designed to bring students together for
-collaborative work and study. There are many benefits to studying in groups:
-study groups help reduce procrastination, improve accuracy covering material,
-increase the number of perspectives, and groups are more effective at
-overcoming challenging material. While there are many benefits
-to group study and collaboration some students are hesitant to forming new
-groups based on past bad experiences or social barriers. While creating
-this mobile application we specifically focused on creating a complete
-solution for students looking for group collaboration and focused on
-overcoming social barriers preventing the formation of groups. In this
-paper we describe the methodology of our design and walk through of the
-Study Social application.
+
+Study Social is a mobile application which brings students together for
+collaborative work and study. There are many well-established benefits to
+group study, including reduced procrastination, improved recall, exposure
+to other perspectives, and more success at overcoming challenging material.
+Despite these benefits students are hesitant to form new groups for myriad
+reasons.  Study Social is a complete solution for students seeking group
+collaboration experiences by overcoming social barriers.  In this paper we
+describe the methodology of our design and testing of the Study Social
+application.
+
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -138,29 +137,6 @@ meaningful ways (events, chat, and file upload).
 
 
 
-\marginpar{%
-  \vspace{-45pt} \fbox{%
-    \begin{minipage}{0.925\marginparwidth}
-      \textbf{Good Utilization of the Side Bar} \\
-      \vspace{1pc} \textbf{Preparation:} Do not change the margin
-      dimensions and do not flow the margin text to the
-      next page. \\
-      \vspace{1pc} \textbf{Materials:} The margin box must not intrude
-      or overflow into the header or the footer, or the gutter space
-      between the margin paragraph and the main left column. The text
-      in this text box should remain the same size as the body
-      text. Use the \texttt{{\textbackslash}vspace{}} command to set
-      the margin
-      note's position. \\
-      \vspace{1pc} \textbf{Images \& Figures:} Practically anything
-      can be put in the margin if it fits. Use the
-      \texttt{{\textbackslash}marginparwidth} constant to set the
-      width of the figure, table, minipage, or whatever you are trying
-      to fit in this skinny space.
-    \end{minipage}}\label{sec:sidebar} }
-
-
-
 \section{Literature Review}
 Through the development of Study Social our design gained insights from
 previous research on context-aware matching, relevant feed algorithms,
@@ -190,7 +166,10 @@ same section, and other social services like Facebook for group formation.
 
 
 
+
 \section{Investigative Research}
+
+
 Once it was agreed to focus on just reaching out to aid university students
 to connect socially within study groups, it was needed to make sure that
 this idea was appropriate given a typical user's needs. This process
@@ -198,6 +177,16 @@ consisted of creating an interview rubric to help determine the
 conventional feelings of students, followed by administering interviews,
 then altering the purpose of the proposed tool to reach and fulfill the
 needs of the individuals that would be using the application.
+
+\begin{marginfigure}[0pc]
+  \begin{minipage}{\marginparwidth}
+    \centering
+    \includegraphics[width=0.9\marginparwidth]{figures/user_study.jpg}
+    \caption{A user study was undertaken as one-on-one interviews with 12 subjects.}~\label{fig:marginfig}
+  \end{minipage}
+\end{marginfigure}
+
+
 
 The objective of the interview questions was intended to get an improved
 understanding of a typical student's study habits, their prior experience
@@ -217,6 +206,11 @@ subject's home or interviewer's home, over the phone, and via video chat.
 The interviews lasted between twenty and thirty minutes, using the same
 interview template, yet allowing the interviewer to probe deeper into the
 discussion when needed.
+
+\begin{figure}
+  \includegraphics[width=0.9\columnwidth]{figures/affinity_diagram.jpg}
+  \caption{Affinity diagram}~\label{fig:sample}
+\end{figure}
 
 To aid in understanding the information gathered using this user research,
 an affinity diagram was made to group information to help understand the
@@ -247,29 +241,35 @@ situations, to focus more on how to make this tool simple and inviting to
 overcome this bias.
 
 
-\begin{figure}
-  \includegraphics[width=0.9\columnwidth]{figures/affinity_diagram.jpg}
-  \caption{Affinity diagram}~\label{fig:sample}
-\end{figure}
+\section{Personas and Scenarios}
 
-\begin{marginfigure}[-15pc]
+\subsection{User Personas}
+
+\begin{marginfigure}[-5pc]
   \begin{minipage}{\marginparwidth}
     \centering
-    \includegraphics[width=0.9\marginparwidth]{figures/user_study.jpg}
-    \caption{A user study was undertaken as one-on-one interviews with 12 subjects.}~\label{fig:marginfig}
+  \includegraphics[width=0.9\marginparwidth]{figures/anna.png}
+    \caption{Persona \#1: Anna Redder}~\label{fig:marginfig}
+  \end{minipage}
+\end{marginfigure}
+
+\begin{marginfigure}[1pc]
+  \begin{minipage}{\marginparwidth}
+    \centering
+  \includegraphics[width=0.9\marginparwidth]{figures/otto.png}
+    \caption{Persona \#2: Otto von Nov }~\label{fig:marginfig}
+  \end{minipage}
+\end{marginfigure}
+
+\begin{marginfigure}[2pc]
+  \begin{minipage}{\marginparwidth}
+    \centering
+  \includegraphics[width=0.7\marginparwidth]{figures/marvin.png}
+    \caption{Persona \#3: Marvin nivram }~\label{fig:marginfig}
   \end{minipage}
 \end{marginfigure}
 
 
-
-\section{Personas and Scenarios}
-
-ALAN WILLIAMS ALAN WILLIAMS ALAN WILLIAMS ALAN WILLIAMS ALAN WILLIAMS
-\textbf{TODO:}
-\textit{Let's find some photographs to go along with each of our personas.
-We can throw that over into the gutter}
-
-\subsection{User Personas}
 
 To aid in structuring this application personas were built to represent
 potential users. The personas were derived from the findings of the user
@@ -314,12 +314,6 @@ overcoming the negative stigma and experiences that are associated with group
 studying.
 
 
-\marginpar{\vspace{5pc}So long as you don't type outside the right
-  margin or bleed into the gutter, it's okay to put annotations over
-  here on the left, too. You'll have to manually align the margin
-  paragraphs to your \LaTeX\ floats using the
-  \texttt{{\textbackslash}vspace{}} command.}
-
 
 \section{Prototypes}
 
@@ -337,8 +331,26 @@ that wold be fun, inviting and, above all, efficient. We reasoned that a
 demanding interface would be a turn off to the busy students we are trying to
 reach.
 
+\begin{marginfigure}[3pc]
+  \begin{minipage}{\marginparwidth}
+    \centering
+	  \includegraphics[width=0.7\marginparwidth]{figures/paper_prototype.jpg}
+    \caption{Early concept sketches}~\label{fig:marginfig}
+  \end{minipage}
+\end{marginfigure}
+
+
 
 \subsection{Digital Prototype}
+
+\begin{marginfigure}[0pc]
+	\begin{minipage}{\marginparwidth}
+		\centering
+		\includegraphics[width=0.9\columnwidth]{figures/prototype1.png}
+		\caption{Profile landing page of the initial prototype}~\label{fig:prototype}
+	\end{minipage}
+\end{marginfigure}
+
 
 After settling on a concept we created a digital prototype using the JustInMind Prototyping
 tool~\cite{justinmind}. This software program enabled our team to create a hi-fidelity interactive
@@ -356,10 +368,6 @@ using the digital prototype from a web browser. Having an interactive
 web-based prototype made administering the cognitive walk-through simple owing
 to the fact that our test subjects were already comfortable with the concept of
 a webpage and could begin tackling their assigned tasks with minimal prompting.
-
-The tasks assigned included creating and populating a personal profile, finding an existing study
-group and creating a new study group. As participants completed these tasks they vocalized their
-thoughts and frustrations so that we cold better understand the thought process of a typical user.
 
 The cognitive walk-through revealed weaknesses in our design which we had theretofore been blind to.
 One such revelation was that our navigation scheme was insufficient and inconsistent, leaving users
@@ -381,8 +389,6 @@ their data was saved. Nor was there any indication of an autosave feature.
 Because of this users sought in vain for the missing button and were reluctant
 to leave the page containing the text-entry forms.
 
-An evaluation of the results of this cognitive walk-through was subsequently
-performed and recorded by team members.
 
 
 \subsection{Heuristic evaluation}
@@ -396,38 +402,29 @@ navigation hints and our over-complicated search interface.
 
 
 
-\begin{marginfigure}[-55pc]
-	\begin{minipage}{\marginparwidth}
-		\centering
-		\includegraphics[width=0.9\columnwidth]{figures/prototype1.png}
-		\caption{Profile landing page of the initial prototype}~\label{fig:prototype}
-	\end{minipage}
-\end{marginfigure}
-
-
-
 \section{Usability Testing}
 
 The result of the foregoing evaluation activities was a bottom-up redesign of
 our application prototype which was prepared for a usability testing activity.
-
 This usability testing of the application was performed with the assistance of
-five volunteers, drawn from the pool of participants of our prior research activities.
+five volunteers, drawn from the pool of participants of our prior research
+activities. As with the cognitive walk-through, the usability testing activity
+was performed using the JustInMind Prototyping tool~\cite{justinmind}.  These
+users were able to judge the difference between the initial and improved
+prototype, and all agreed that the new prototype addressed their concerns.
 
-As with the cognitive walk-through, the usability testing activity was
-performed using the JustInMind Prototyping tool~\cite{justinmind}. 
+Users performed a sequence of tasks including creating and populating a
+personal profile, finding an existing study group and creating a new study
+group. As participants completed these tasks they vocalized their thoughts and
+frustrations so that we cold better understand the thought process of a typical
+user.
 
-These users were able to judge the difference between the initial and
-improved prototype, and all agreed that the new prototype addressed their
-concerns.
-
-Users performed a sequence of tasks
 
 \marginpar{
-	\vspace{-4pt}
+	\vspace{-80pt}
 	\fbox {
 		\begin{minipage}{0.925\marginparwidth}
-			Usability Testing Tasks
+			\textbf{Usability Testing Tasks}
 			\begin{itemize}
 				\item	Create account
 				\item	Edit Profile
@@ -438,6 +435,16 @@ Users performed a sequence of tasks
 		\end{minipage}
 	}
 }
+
+\begin{marginfigure}[23pt]
+  \begin{minipage}{\marginparwidth}
+    \centering
+	  \includegraphics[width=0.7\marginparwidth]{figures/beta_prototype.png}
+    \caption{Final prototype}~\label{fig:marginfig}
+  \end{minipage}
+\end{marginfigure}
+
+
 
 
 
