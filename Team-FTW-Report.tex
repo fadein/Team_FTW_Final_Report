@@ -92,7 +92,7 @@ to other perspectives, and more success at overcoming challenging material.
 Despite these benefits students are hesitant to form new groups for myriad
 reasons.  Study Social is a complete solution for students seeking group
 collaboration experiences by overcoming social barriers.  In this paper we
-describe the methodology of our design and testing of the Study Social
+describe our design goals and testing methodology of the Study Social
 application.
 
 \end{abstract}
@@ -105,31 +105,38 @@ application.
 
 \section{Introduction}
 
-Beginning the development of the Study Social application, our group identified the
-need within the user base of students to have a tool for collaborating and
-group study. While the application has a broad application, the initial purpose was to
-help students find groups. Beyond finding groups to study with Study Social
-helps organize the group effort and provide tools like chat and file uploads
-for the groups to work with.
+The genesis of the Study Social application was the identification by our group of the
+need among university students of a tool for in support of collaboration and group study. 
+
+While this software has a broad application, the initial purpose was to
+help students form and find study groups composed of compatible classmates.
+Beyond finding groups, the Study Social application assists group members 
+with organizational tasks through communication tools such as chat rooms and
+message boards, along with an integrated search interface, user profiles, 
+endorsements and file uploads.
+
+\subsection{Problem Statement}
 
 Our initial problem statement when we began our research was, ``College
 students seeking a compatible study group or tutor face a challenge as
 difficult as finding a date''. While the initial problem statement is still
-valid, helping students form groups and collaborate with students that begin
-as possible strangers is more complicated.
+valid, helping students form groups and collaborate with as-yet acquainted
+classmates proves to be much more complicated.
 
-Through our initial research dealing with student study habits and experiences
-in study groups we found students are hesitant to join a study group based on
-past experiences and usually prefer to work through difficult material on
-their own than to form a study group. Several barriers include; group
-socialized too much because of size, mismatched knowledge levels (one always
-teaching the other), or the group was created by a professor and the group
-members had different levels of motivation - to name a few.
+Our initial research into student study habits and previous study 
+group experiences revealed that many university students are hesitant to join
+a study group on their own accord due to negative experiences in group settings.
+The result is that participants reported a strong preference to work through
+difficult material by themselves rather than join a study group. Reported barriers
+include: large groups tend to socialize instead of study, group
+members with had different levels of motivation fail to expend equal effort,
+mismatched knowledge levels between participants lead to confusion or frustration,
+and widespread dissatisfaction with study groups mandated by the instructor.
+In general our study participants reported instances of good group study outcomes,
+but the recollection of negative experiences loomed large in their minds.
 
-Generally our interviewed students have had good experiences but the risk of
-incompatibility outweighs the benefits to group study leading to individual
-study. Petress indicates the benefits of group study as; increases confidence,
-improves student's subject articulation, increases perspective, validates
+Research by Petress indicates the benefits of group study as: increases confidence,
+improves student's subject articulation, broadens perspective, validates
 knowledge, etc. \cite{petress2004benefits}. In order to make a successful
 application we began our work overcoming social barriers to forming a group
 while creating a tool to help students take advantage of the benefits of group
@@ -158,13 +165,19 @@ streams''~\cite{lommatzsch2015real} provides insights into serving relevant
 information feeds. While not yet implemented in Study Social this information
 is key to the ``Around Me'' group feed featured in the prototype.
 
+``Too much information'' by Christensen et. al.~\cite{christensen2006too}
+describes a location-based content matching system. As study groups will be
+comprised classmates attending the same campus, it makes sense for the
+application to be aware of and to exploit geolocation technology to restrict
+search results based upon physical location. 
+
 From Petress's research on ``The Benefits of Group
-Study''~\cite{petress2004benefits} we can understand the need for a platform
-to facilitate group study. Market research has shown there is no major
-platform of this type to directly facilitate study group formations. A few
-outlying services include Google Docs to collaborate worksheets, Linked In to
-make professional connections, Canvas for contacting classmates within the
-same section, and other social services like Facebook for group formation.
+Study''~\cite{petress2004benefits} we can understand the need for a platform to
+facilitate group study. Market research has shown there is no major platform of
+this type to directly facilitate study group formations. A few outlying
+services include Google Docs to collaborate worksheets, Linked In to make
+professional connections, Canvas for contacting classmates within the same
+section, and other social services like Facebook for group formation.
 
 
 
@@ -180,140 +193,146 @@ conventional feelings of students, followed by administering interviews,
 then altering the purpose of the proposed tool to reach and fulfill the
 needs of the individuals that would be using the application.
 
-\begin{marginfigure}[0pc]
+\begin{marginfigure}[-10pc]
   \begin{minipage}{\marginparwidth}
     \centering
     \includegraphics[width=0.9\marginparwidth]{figures/user_study.jpg}
-    \caption{A user study was undertaken as one-on-one interviews with 12 subjects.}~\label{fig:marginfig}
+	\caption{A user study was undertaken as semi-structured one-on-one
+	  interviews with 12 subjects.}
   \end{minipage}
 \end{marginfigure}
 
 
 
-The objective of the interview questions was intended to get an improved
-understanding of a typical student's study habits, their prior experience
-within a study group setting, as well as their current attitudes in regards
-to being part of such a group. The thinking was that if one could
-understand the motivation behind a student's need to reach out for help, it
-would in turn lead to the best way to create a service that would actually
-be accepted and used for their needs.
+Interview questions allowed us to learn about the typical student's study
+habits, explore their prior experiences, and discover their disposition towards
+to being part of such a group. By first understanding the motivation behind a
+student's decision to reach out for help, we would then better be able to
+create a useful application that would actually be adopted.
 
-The interviews were conducted using a semi-structured format with twelve
-students attending various universities. While all but one of the students
-interviewed were undergraduate students, their level, depth and commitment
-to their education seemed to span over a large spectrum of potential users.
-The interviews were conducted by each member of the research team and done
-one-on-one using various mediums, such as face-to-face interviews in the
-subject's home or interviewer's home, over the phone, and via video chat.
-The interviews lasted between twenty and thirty minutes, using the same
-interview template, yet allowing the interviewer to probe deeper into the
-discussion when needed.
+Semi-structured interviews were performed with twelve participants from various
+universities.  Each member of the research team conducted one-on-one interviews
+which were carried out in-person or electronically.  Interviews lasted between
+twenty and thirty minutes following a common interview template. The
+interviewer had the discretion to adapt the discussion so as to probe deeper
+into any interesting subject that arose.  All but one of the students
+interviewed were undergraduate students.  Participants' investment in their
+education spanned a wide spectrum.
+
 
 \begin{figure}
   \includegraphics[width=0.9\columnwidth]{figures/affinity_diagram.jpg}
   \caption{Affinity diagram}~\label{fig:sample}
 \end{figure}
 
-To aid in understanding the information gathered using this user research,
-an affinity diagram was made to group information to help understand the
-commonalities among the different participants. In regard to individual
-study behavior, individuals tended to spend little to moderate time
-studying (less than 10 hours per week) or a large amount of time studying
-(15 to 20 hours per week), with none in between. Most of the subjects
-preferred to study alone in a quiet location with minimal distractions.
-Also, most would not reach out unless they could not understand the
-material first; reaching out to material in books or the on the Internet
-before searching out friends or classmates direction.
+Interview results were transferred to an affinity diagram to reveal patterns,
+commonalities and outliers among the responses.  Respondents were distributed
+into two clusters: those who spent little time on study (less than 10 hours per
+week) and those making a significant investment (15 to 20 hours per week).
+Nearly all subjects studied alone in a quiet location without distractions. A
+majority of respondents reported that they will reach out to other people only
+after exhausting written resources including textbooks and the Internet; after
+those resources failed help might be sought from classmates before the
+instructor was queried as a last resort.
 
-Another finding was that it was agreed that the ideal group size was
-between three and four individuals per group. The subjects' rational for
-this was due to the negative experiences they had had with larger groups
-that suffered from lack of focus or group members' different level of
-understanding being too wide to facilitate effective discussion. They also
-reported a preference to meet on campus.
+The ideal group size was discovered to be three to four individuals.
+Participants reported that large groups lacked focus and that it was less
+likely for all members to be at the same level of understanding. Respondents
+expressed a strong preference to meet on campus. All participants had
+previously been assigned to a study groups by an instructor, which experience
+was remembered unpleasantly.
 
-However, the greatest finding in this research came about as a result of
-those interviewed having had prior study group exposure, with most of it
-being due to being assigned to a group by a professor and thus had a
-negative experience. Despite this, overall the satisfaction was mildly
-positive in regards to their current motivation to study with a group; but
-only given the right circumstances within a familiar environment with known
-colleagues. This let us to change our focus to getting people into social
-situations, to focus more on how to make this tool simple and inviting to
-overcome this bias.
+Nevertheless, respondents general attitude toward group study was mildly positive with the
+caveat that the group must consist of acquaintances and convene in a familiar
+environment.  Consequently, our team shifted its focus toward overcoming ingrained biases and
+facilitating successful study experiences in comfortable social situations
+through a simple and inviting tool.  
 
 
 \section{Personas and Scenarios}
 
 \subsection{User Personas}
 
-\begin{marginfigure}[-5pc]
+\begin{marginfigure}[-14pc]
   \begin{minipage}{\marginparwidth}
     \centering
   \includegraphics[width=0.9\marginparwidth]{figures/anna.png}
-    \caption{Persona \#1: Anna Redder}~\label{fig:marginfig}
+    \caption{Persona \#1: Outgoing freshman Anna Redder}
   \end{minipage}
 \end{marginfigure}
 
-\begin{marginfigure}[1pc]
-  \begin{minipage}{\marginparwidth}
-    \centering
-  \includegraphics[width=0.9\marginparwidth]{figures/otto.png}
-    \caption{Persona \#2: Otto von Nov }~\label{fig:marginfig}
-  \end{minipage}
-\end{marginfigure}
-
-\begin{marginfigure}[2pc]
+\begin{marginfigure}[0pc]
   \begin{minipage}{\marginparwidth}
     \centering
   \includegraphics[width=0.7\marginparwidth]{figures/marvin.png}
-    \caption{Persona \#3: Marvin nivram }~\label{fig:marginfig}
+    \caption{Persona \#2: Introverted non-traditional student Marvin Nivram }
+  \end{minipage}
+\end{marginfigure}
+
+\begin{marginfigure}[0pc]
+  \begin{minipage}{\marginparwidth}
+    \centering
+  \includegraphics[width=0.9\marginparwidth]{figures/otto.png}
+    \caption{Persona \#3: Aspiring professor Otto von Nov}
   \end{minipage}
 \end{marginfigure}
 
 
 
-To aid in structuring this application personas were built to represent
-potential users. The personas were derived from the findings of the user
-research to represent a typical student. First, a user who is early on in her
-education at a school which is far from home, Anna Reeder is still in the
-exploring phase of her education as she learns about potential areas of study.
-She feels like she has something to prove, motivating the moving out-of-state
-to see what else the world has for her, despite numerous unknowns. Secondly,
-Marvin Nivram is a student who is further into his undergraduate program, thus
-focusing his schedule on the major courses needed to complete his degree. All
-the while, he is trying to manage life as a student and husband, living in his
-parents' basement, wondering how his uneasiness is social settings is going to
-impact him as he seeks a ``real'' job upon graduation. Lastly a foreign graduate
-student from Germany named Otto Von Nov has different motivations toward being
-a part of a study groups. He willingly seeks them out to aid with the language
-barrier that he is dealing with in a new culture and is willing to participate
-to develop the skills that will make him successful as a future professor. We
-felt that these three personas covered the majority of the demographics of not
-only those that we interviewed, but the different social personalities and
-living conditions that they are in.
+
+To aid our development of Study Social, personas were derived from our user
+research findings to represent an inclusive range of typical students.
+
+\textit{Anna Reeder} is a student who is just embarking on her university education at a
+school far from home. She is still in the exploration phase of education as she
+learns which areas of study appeal to her.  She has something to prove, which
+drives her to take the daring step to attend an out-of-state school to find
+what else the world has for her.
+
+\textit{Marvin Nivram} is near the end of his undergraduate studies. Thus he
+focuses his schedule on the remaining major courses necessary to complete his
+degree. Meanwhile, he is striving to balance his responsibilities as a student
+and a husband while living in his parents' basement. Marvin worries that his
+introverted nature and uneasiness in social situations will negatively impact
+him when it comes time to obtain a ``real'' job upon graduation.
+
+\textit{Otto Von Nov} is a graduate student from Germany who is motivated to
+participate in study groups to further his immersion into a new culture.  He
+willingly seeks opportunities to improve his mastery of the English language
+and to develop the skills that will help him to be successful as a professor.
+
+These personas enabled us to empathize with and consider the full demographic
+spectrum of our investigation participants, their varied personalities and
+living situations.
 
 \subsection{Scenarios}
 
-After having the types of people who would use the ``Study Social''
-application, scenarios were created to give a better idea of what situations
-would drive a user to use the application and how the application would aid
-them with their goal. We gave a situation that our user research subjects
-indicated was a circumstance which would lead to the need for a study group,
-not being able to understand or solve material on their own. We also included a
-scenario for those who want to form groups but do not have the tools necessary
-to do so. The scenarios were intended to be applied toward a student from any
-background falling into the given circumstance, but were applied to the
-individual personas for ease. Two of the scenarios were intended to covered the
-negative reasons why individuals would stay away from joining groups, then
-being placed in a situation where they did not really have any other choice and
-used the application to ease social anxiety, or getting the student out of a
-bind by waiting too long. The other scenario was to help show that there are
-students that recognize the benefits of study groups because they develop
-skills that are desirable to employers. Three scenarios seemed to appropriately
-convey the meaning of the data that we received in the user research on
-overcoming the negative stigma and experiences that are associated with group
-studying.
+Having in mind typical Study Social users, scenarios were devised to give
+insight into the conditions which would encourage a user use the application
+and how it might aid them.
+
+Two scenarios addressed the reasons cited by participants for \textit{not}
+participating in study groups. One scenario sees students placed by their
+instructor into an arbitrary group. Not having control over the formation of
+the group is demotivating, but use of the application by participants is found
+to reduce social anxiety, improve intra-group communication and contribute to
+positive group dynamics.
+
+A related scenario exhibits students who recognize the benefits of study groups
+despite being uncomfortable with the level of social engagement they entail.
+Use of the app helps them to be able to develop important social and job skills
+with the intent to improve their marketability to future employers.
+
+The final situation suggested by our user research subjects was that of not
+being able to understand or solve material on their own. This nearly universal
+experience was cited by many participants as being a strong motivation to
+expand their efforts beyond their immediate circle of acquaintances.  Another
+scenario described students who wished to form a group but lacked the tools
+necessary to do so. 
+
+Taken together, these three scenarios adequately cover the data collected by
+our research efforts on overcoming the negative stigma and experiences that are
+associated with group studying.
 
 
 
@@ -333,11 +352,11 @@ that wold be fun, inviting and, above all, efficient. We reasoned that a
 demanding interface would be a turn off to the busy students we are trying to
 reach.
 
-\begin{marginfigure}[3pc]
+\begin{marginfigure}[-24pc]
   \begin{minipage}{\marginparwidth}
     \centering
 	  \includegraphics[width=0.7\marginparwidth]{figures/paper_prototype.jpg}
-    \caption{Early concept sketches}~\label{fig:marginfig}
+    \caption{Early concept sketches}
   \end{minipage}
 \end{marginfigure}
 
@@ -345,7 +364,7 @@ reach.
 
 \subsection{Digital Prototype}
 
-\begin{marginfigure}[0pc]
+\begin{marginfigure}[-7pc]
 	\begin{minipage}{\marginparwidth}
 		\centering
 		\includegraphics[width=0.9\columnwidth]{figures/prototype1.png}
@@ -371,14 +390,13 @@ web-based prototype made administering the cognitive walk-through simple owing
 to the fact that our test subjects were already comfortable with the concept of
 a webpage and could begin tackling their assigned tasks with minimal prompting.
 
-The cognitive walk-through revealed weaknesses in our design which we had theretofore been blind to.
-One such revelation was that our navigation scheme was insufficient and inconsistent, leaving users
-lost and confused.
-
-This design deficit followed from our understanding of how a paper prototype
-ought to be designed. Looking back, it is clear that we had come to envision
-the application as a sequence of hyperlinked pages, one screen in size instead
-of imagining it as a unified, continuous flow.  Navigation was unnecessarily
+The cognitive walk-through revealed weaknesses in our design which we had
+theretofore been blind to. One such revelation was that our navigation scheme
+was insufficient and inconsistent, leaving users lost and confused.  This
+design deficit followed from our understanding of how a paper prototype ought
+to be designed. Looking back, it is clear that we had come to envision the
+application as a sequence of hyperlinked pages, one screen in size instead of
+imagining it as a unified, continuous flow.  Navigation was unnecessarily
 difficult because it wasn't always clear on which screen a piece of desired
 information was located, nor was it obvious how to reach a desired destination
 from the user's current screen.
@@ -400,7 +418,7 @@ functions of the application. Of the ten design heuristics under consideration, 
 up as problematic to our prototype. These were ``User control and freedom'' and ``consistency and
 standards''. The aforementioned navigation confusion along with the lack of a save button were the
 biggest drivers of the former heuristic. The latter was exemplified by our inconsistent use of
-navigation hints and our over-complicated search interface.
+navigation hints and a complicated search interface.
 
 
 
@@ -415,15 +433,14 @@ was performed using the JustInMind Prototyping tool~\cite{justinmind}.  These
 users were able to judge the difference between the initial and improved
 prototype, and all agreed that the new prototype addressed their concerns.
 
-Users performed a sequence of tasks including creating and populating a
-personal profile, finding an existing study group and creating a new study
-group. As participants completed these tasks they vocalized their thoughts and
-frustrations so that we cold better understand the thought process of a typical
-user.
+Users were asked to perform a series of tasks including creating and populating
+a personal profile, finding an existing study group and creating a new study
+group. Participants vocalized their thoughts and frustrations to give us
+insight into a user's experience.
 
 
 \marginpar{
-	\vspace{-80pt}
+	\vspace{-180pt}
 	\fbox {
 		\begin{minipage}{0.925\marginparwidth}
 			\textbf{Usability Testing Tasks}
@@ -442,7 +459,7 @@ user.
   \begin{minipage}{\marginparwidth}
     \centering
 	  \includegraphics[width=0.7\marginparwidth]{figures/beta_prototype.png}
-    \caption{Final prototype}~\label{fig:marginfig}
+    \caption{Final prototype}
   \end{minipage}
 \end{marginfigure}
 
@@ -452,17 +469,17 @@ user.
 
 \section{Conclusion}
 
-Understanding the barriers keeping students from enjoying effective group study
-sessions helped our team create the Study Social application. Our initial group of
-interviewees who expressed negative feelings towards group study later remarked
-that they would definitely use the product our final prototype represented.
-Evolving our idea from a simple tutor-student matching application to a
-complete group collaboration study application with chat and file uploads was a
-iterative process led by research.  Study Social is positioned to fill a niche
-in the market between a social forming application and a collaboration tool.
-Students can overcome the initial barriers of forming functioning study groups
-and improve confidence, understanding, accuracy, and overcome frustration by
-working together on difficult material.        
+Understanding what prevents students from enjoying effective group study
+sessions helped our team create the Study Social application. Our initial group
+of interviewees who expressed negative feelings towards group study later
+remarked that they would definitely use the product our final prototype
+represented.  Evolving our idea from a simple tutor-student matching
+application to a complete group collaboration study application with chat and
+file uploads was a iterative process led by research.  Study Social is
+positioned to fill a niche in the market between a social forming application
+and a collaboration tool.  Students can overcome the initial barriers of
+forming functioning study groups and improve confidence, understanding,
+accuracy, and overcome frustration by working together on difficult material.        
 
 
 \section{Acknowledgements}
